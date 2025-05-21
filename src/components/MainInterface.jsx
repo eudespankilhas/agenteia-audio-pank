@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaWhatsapp, FaMicrophone, FaStop, FaPaperPlane, FaRobot, FaMicrophoneAlt, FaRecordVinyl, FaStore } from 'react-icons/fa';
 import LojaAgenteIA from './store/LojaAgenteIA';
 import Chat from './Chat/Chat';
-import logo from '../assets/logo.png';
 import Image from 'next/image';
 import '../styles/store.css';
 
