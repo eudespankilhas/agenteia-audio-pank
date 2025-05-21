@@ -2,18 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    },
-    {
-      "src": "api/*.js",
-      "use": "@vercel/node"
+      "src": "app/package.json",
+      "use": "@vercel/next"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/$1.js"
+      "dest": "/api/$1"
     },
     {
       "src": "/aitopia/(.*)",
@@ -45,6 +41,4 @@
       "destination": "https://extensions.aitopia.ai/$1"
     }
   ]
-  ],
-  "env": {}
 }
