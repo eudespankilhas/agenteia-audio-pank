@@ -9,10 +9,7 @@ const nextConfig = {
     path: '/_next/image',
     minimumCacheTTL: 60,
   },
-  // Configuração de arquivos estáticos
-  staticFileDirectories: ['public'],
-  // Desativa a pré-renderização estática para evitar erros durante o build
-  output: 'standalone',
+  // Configuração de arquivos estáticos (usando a pasta public padrão do Next.js)
   // Otimizações para o Supabase
   async headers() {
     return [
@@ -29,8 +26,18 @@ const nextConfig = {
           },
         ],
       },
-    ]
+    ];
   },
+  // Configuração para o Netlify
+  output: 'standalone',
+  // Configuração para otimizar o build
+  experimental: {
+    optimizePackageImports: ['@chakra-ui/react']
+  },
+  // Configuração do Netlify
+  output: 'standalone',
+  // Configuração de exportação
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -38,10 +45,15 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   // Configuração de webpack
-  webpack: (config) => {
-    config.resolve.fallback = { ...config.resolve.fallback, fs: false };
+  webpack(config) {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      path: false,
+      os: false
+    };
     return config;
-  },
+  }
 }
 
 export default nextConfig
