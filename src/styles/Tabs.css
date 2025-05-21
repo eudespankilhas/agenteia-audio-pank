@@ -1,0 +1,60 @@
+import '../styles/Tabs.css';
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tabs button:hover {
+  background-color: #225ea8;
+  transform: scale(1.05);
+}
+
+.tabs button.active {
+  background-color: #225ea8;
+  color: #fff;
+  font-weight: bold;
+}
+
+.tabs button:focus {
+  outline: 2px solid #225ea8;
+  outline-offset: 2px;
+}
+
+.response {
+  margin-top: 20px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.response p {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+export default defineConfig({
+  server: {
+    port: 5177, // Porta configurada para o ambiente local
+  },
+  plugins: [react()],
+});

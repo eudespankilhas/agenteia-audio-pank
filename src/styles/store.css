@@ -1,0 +1,24 @@
+.store-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #1E293B;
+  color: #FFFFFF;
+}
+
+.store-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.store-container::-webkit-scrollbar-track {
+  background: #1E293B;
+}
+
+.store-container::-webkit-scrollbar-thumb {
+  background: #4F46E5;
+  border-radius: 4px;
+}
+
+.store-container::-webkit-scrollbar-thumb:hover {
+  background: #4338CA;
+}

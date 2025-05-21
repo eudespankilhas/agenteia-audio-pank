@@ -1,0 +1,82 @@
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="image-reader-module/index.html">Leitura de Imagens</a></li>
+    <!-- Adicione mais links conforme necessário -->
+  </ul>
+</nav>nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #45a049;
+}<div class="tabs" style="display: flex; gap: 10px; margin-bottom: 20px;">
+  <button onclick="askTheme('ia_vertical')">🤖 Saber sobre IA</button>
+  <button onclick="askTheme('futebol')">⚽ Futebol Brasileiro</button>
+  <button onclick="askTheme('cinema')">📺 Curiosidades da TV</button>
+</div>
+<div id="resposta" style="margin-top: 2rem;"></div>
+
+<script>
+  async function askTheme(theme) {
+    try {
+      const res = await fetch('/api/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ theme })
+      });
+      const data = await res.json();
+      document.getElementById('resposta').innerHTML = '<p>' + data.answer + '</p>';
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      document.getElementById('resposta').innerHTML = '<p>Erro ao obter resposta. Tente novamente.</p>';
+    }
+  }
+</script>git add .
+git commit -m "feat: Melhorias na interface e configuração de deploy"
+git push origin main<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Reader</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Image Reader</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="image-upload">
+      <input type="file" id="image-input" accept="image/*">
+      <button id="upload-button">Enviar Imagem</button>
+      <div id="image-preview"></div>
+    </section>
+    <section class="image-info">
+      <h2 id="image-title"></h2>
+      <p id="image-description"></p>
+      <button id="copy-button">Copiar Texto</button>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="script.js"></script>
+</body>
+</html>

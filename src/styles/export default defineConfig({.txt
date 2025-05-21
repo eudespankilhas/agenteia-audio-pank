@@ -1,0 +1,6 @@
+export default defineConfig({
+  server: {
+    port: 5177, // Porta configurada para o ambiente local
+  },
+  plugins: [react()],
+});

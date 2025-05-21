@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang22 VITE_OPENAI_API_KEY=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\line\line\line VITE_SUPABASE_URL={{\field{\*\fldinst{HYPERLINK https://zsxcdadgjpsekzzmcdro.supabase.co }}{\fldrslt{https://zsxcdadgjpsekzzmcdro.supabase.co\ul0\cf0}}}}\f0\fs22\line\par
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpzeGNkYWRnanBzZWt6em1jZHJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY1NjQ3ODEsImV4cCI6MjA2MjE0MDc4MX0.1hnXJpGWHc2AITbzEM1C9fIHIdpjEIC3njZJvrdmCzw\par
+import express from 'express';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const app = express();file:///h:/agenteiaaudiopank/agenteiaaudiopank/image-reader-module/index.html
+
+const port = process.env.PORT || 5177;
+
+app.get('/', (req, res) => {
+  res.send('AGENTE IA - ÁUDIO PANK está rodando!');
+});
+
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
+});

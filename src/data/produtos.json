@@ -1,0 +1,31 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Ebook: Introdução à IA",
+      "descricao": "Guia prático sobre Inteligência Artificial para iniciantes.",
+      "tipo": "gratuito",
+      "preco": 0,
+      "imagem": "/assets/products/ebook-ia.png",
+      "link": "https://www.exemplo.com/ebook-ia.pdf"
+    },
+    {
+      "id": 2,
+      "nome": "Trilha de Áudio: Foco e Criatividade",
+      "descricao": "Áudio exclusivo para estimular foco e produtividade.",
+      "tipo": "gratuito",
+      "preco": 0,
+      "imagem": "/assets/products/audio-foco.png",
+      "link": "https://www.exemplo.com/audio-foco.mp3"
+    },
+    {
+      "id": 3,
+      "nome": "Ebook Premium: IA nos Negócios",
+      "descricao": "Aprenda a aplicar Inteligência Artificial no seu negócio com esse guia completo.",
+      "tipo": "pago",
+      "preco": 19.9,
+      "imagem": "/assets/products/ebook-premium.png",
+      "link": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=SUA_ID_DE_PAGAMENTO"
+    }
+  ]
+}
