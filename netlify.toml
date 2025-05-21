@@ -1,0 +1,16 @@
+[build]
+command = "npm run build"
+publish = "dist"
+
+[dev]
+command = "npm run dev"
+port = 3000
+
+[functions]
+  [functions.node_version]
+    external_node_modules = []
+
+[[redirects]]
+from = "/api/*"
+to = "https://api.agenteia-audio-pank.vercel.app/:splat"
+status = 200

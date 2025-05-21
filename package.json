@@ -1,33 +1,52 @@
 {
   "name": "agente-ia-audio-pank",
   "version": "1.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "start": "node server.js",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/react": "^2.7.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-switch": "^1.1.1",
+    "@radix-ui/react-tabs": "^1.1.1",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@supabase/supabase-js": "^2.38.5",
     "axios": "^1.9.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "framer-motion": "^12.11.4",
+    "lucide-react": "^0.309.0",
+    "mercadopago": "^2.7.0",
     "mic-recorder-to-mp3": "^2.2.2",
+    "next": "14.0.4",
+    "next-themes": "^0.2.1",
     "openai": "^4.24.1",
     "react": "18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "18.2.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.0.12",
-    "vite-plugin-imp": "^2.4.0"
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
   }
 }
